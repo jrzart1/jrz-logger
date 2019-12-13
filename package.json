@@ -1,0 +1,19 @@
+{
+  "name": "jrz-logger",
+  "version": "1.0.0",
+  "description": "Pacote para extensão de logs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jonaszart@bitbucket.org/jonaszart/jrz-logger.git"
+  },
+  "author": "Jonas R. Zart",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "winston": "^3.2.1"
+  }
+}
