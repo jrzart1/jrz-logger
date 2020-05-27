@@ -1,6 +1,6 @@
 {
   "name": "jrz-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pacote para extensão de logs",
   "main": "index.js",
   "scripts": {
