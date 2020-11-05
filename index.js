@@ -10,8 +10,8 @@ const {
   timestamp,
 } = format;
 
-const isLabel = info => (info.label ? `[_${info.label}_]` : '');
-const defaultFormat = printf(info => (
+const isLabel = (info) => (info.label ? `[_${info.label}_]` : '');
+const defaultFormat = printf((info) => (
   `${moment(info.timestamp).format('MMM D, HH:mm:ss:SSS')} - ${isLabel(info)} [_${info.level}_] : ${info.message}`
 ));
 
@@ -40,20 +40,20 @@ const myCustomLevels = {
 
 winston.addColors(myCustomLevels.colors);
 
-const combineProd = tag => combine(
+const combineProd = (tag) => combine(
   timestamp(),
   label({ label: tag }),
   defaultFormat,
 );
 
-const combineDev = tag => combine(
+const combineDev = (tag) => combine(
   timestamp(),
   colorize(),
   label({ label: tag }),
   defaultFormat,
 );
 
-const getCombine = tag => (
+const getCombine = (tag) => (
   process.env.NODE_ENV === 'Production' ? combineProd(tag) : combineDev(tag)
 );
 
@@ -70,7 +70,7 @@ const makeLogger = (tag, level) => {
   const logger = getLogger(tag, level);
 
   function makeLogFunction(name) {
-    return data => (
+    return (data) => (
       logger[name](JSON.stringify(data))
     );
   }

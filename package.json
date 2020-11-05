@@ -1,19 +1,29 @@
 {
   "name": "jrz-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pacote para extensão de logs",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/*.spec.js --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://jonaszart@bitbucket.org/jonaszart/jrz-logger.git"
+    "url": "git+https://github.com/jrzart1/jrz-logger.git"
   },
   "author": "Jonas R. Zart",
   "license": "ISC",
   "dependencies": {
     "moment": "^2.24.0",
     "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "mocha": "^8.2.1",
+    "sinon": "^9.2.1"
   }
 }

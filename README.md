@@ -1,6 +1,6 @@
 # jrz-logger
 
-Módulo dedicado a padronizar os erros e tratamento de erros.
+Pacote para extensão de logs
 
 ## Instalação
 
