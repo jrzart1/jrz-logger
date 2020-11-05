@@ -1,13 +1,13 @@
 {
   "name": "jrz-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pacote para extensão de logs",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/*.spec.js --watch"
+    "test": "mocha test/*.spec.js --exit"
   },
   "repository": {
     "type": "git",
